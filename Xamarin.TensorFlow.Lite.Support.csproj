@@ -20,10 +20,16 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <PackOnBuild>true</PackOnBuild>
     <PackageOutputPath>bin\Package</PackageOutputPath>
-    <PackageId>tensorflow-lite-support</PackageId>
+    <PackageId>Xamarin.TensorFlow.Lite.Support</PackageId>
     <PackageVersion>0.1.0</PackageVersion>
-    <Authors>https://github.com/v-hogood/tensorflow-lite-support</Authors>
-    <Description>Xamarin binding of TensorFlow-Lite Support Library: https://github.com/tensorflow/tflite-support</Description>
+    <Authors>Howard Good</Authors>
+    <Description>Xamarin bindings for TensorFlow-Lite Support library: https://github.com/tensorflow/tflite-support</Description>
+    <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/v-hogood/Xamarin.TensorFlow.Lite.Support</PackageProjectUrl>
+    <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
+    <Summary>Xamarin bindings for TensorFlow-Lite Support library</Summary>
+    <PackageTags>xamarin android tensorflow</PackageTags>
+    <Title>Xamarin.TensorFlow.Lite.Support</Title>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
