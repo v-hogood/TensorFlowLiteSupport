@@ -7,6 +7,12 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+  <remove-node path="/api/package[@name='org.tensorflow.lite.support.common']/class[@name='SequentialProcessor.Builder']/method[@name='add']" />
+  <remove-node path="/api/package[@name='org.tensorflow.lite.support.common']/class[@name='SequentialProcessor.Builder']/method[@name='build']" />
   <remove-node path="/api/package[@name='org.tensorflow.lite.support.common']/class[@name='TensorProcessor.Builder']/method[@name='build']" />
   <remove-node path="/api/package[@name='org.tensorflow.lite.support.image']/class[@name='ImageProcessor.Builder']/method[@name='build']" />
+  <!-- Hide "private" Property fields -->
+  <remove-node path="/api/package[@name='org.tensorflow.lite.support.tensorbuffer']/class[@name='TensorBuffer']/field[@name='buffer']" />
+  <remove-node path="/api/package[@name='org.tensorflow.lite.support.tensorbuffer']/class[@name='TensorBuffer']/field[@name='flatSize']" />
+  <remove-node path="/api/package[@name='org.tensorflow.lite.support.tensorbuffer']/class[@name='TensorBuffer']/field[@name='isDynamic']" />
 </metadata>
