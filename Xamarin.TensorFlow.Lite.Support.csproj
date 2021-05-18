@@ -25,7 +25,7 @@
     <Authors>Howard Good</Authors>
     <Description>Xamarin bindings for TensorFlow Lite Support Library.</Description>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageRepositoryUrl>https://github.com/tensorflow/tflite-support</PackageRepositoryUrl>
+    <RepositoryUrl>https://github.com/tensorflow/tflite-support</RepositoryUrl>
     <PackageProjectUrl>https://github.com/v-hogood/Xamarin.TensorFlow.Lite.Support</PackageProjectUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
     <Summary>Xamarin bindings for TensorFlow Lite Support Library</Summary>
