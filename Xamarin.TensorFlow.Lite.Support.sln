@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Gpu.Delegate.Plugin", "Xamarin.TensorFlow.Lite.Gpu.Delegate\Xamarin.TensorFlow.Lite.Gpu.Delegate.Plugin.csproj", "{9A53D7F1-C4E7-4E37-A7C8-9EA70339CF0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Task.Text", "Xamarin.TensorFlow.Lite.Task.Text\Xamarin.TensorFlow.Lite.Task.Text.csproj", "{9490409C-D7F5-4725-991C-3B1C9F702604}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9A53D7F1-C4E7-4E37-A7C8-9EA70339CF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A53D7F1-C4E7-4E37-A7C8-9EA70339CF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A53D7F1-C4E7-4E37-A7C8-9EA70339CF0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9490409C-D7F5-4725-991C-3B1C9F702604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9490409C-D7F5-4725-991C-3B1C9F702604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9490409C-D7F5-4725-991C-3B1C9F702604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9490409C-D7F5-4725-991C-3B1C9F702604}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
