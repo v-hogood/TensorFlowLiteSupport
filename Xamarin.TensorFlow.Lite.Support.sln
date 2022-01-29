@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Gpu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Task.Text", "Xamarin.TensorFlow.Lite.Task.Text\Xamarin.TensorFlow.Lite.Task.Text.csproj", "{9490409C-D7F5-4725-991C-3B1C9F702604}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Task.Audio", "Xamarin.TensorFlow.Lite.Task.Audio\Xamarin.TensorFlow.Lite.Task.Audio.csproj", "{62B94B0D-F170-4E59-A292-E98B653238DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9490409C-D7F5-4725-991C-3B1C9F702604}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9490409C-D7F5-4725-991C-3B1C9F702604}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9490409C-D7F5-4725-991C-3B1C9F702604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B94B0D-F170-4E59-A292-E98B653238DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B94B0D-F170-4E59-A292-E98B653238DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B94B0D-F170-4E59-A292-E98B653238DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B94B0D-F170-4E59-A292-E98B653238DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
