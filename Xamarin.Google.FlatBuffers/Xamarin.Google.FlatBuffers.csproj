@@ -14,7 +14,7 @@
     <AssemblyName>Xamarin.Google.FlatBuffers</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <Deterministic>True</Deterministic>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
@@ -26,10 +26,10 @@
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
     <RepositoryUrl>https://github.com/google/flatbuffers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/v-hogood/Xamarin.TensorFlow.Lite.Support</PackageProjectUrl>
-    <Summary>Xamarin bindingds for Google FlatBuffers Library.</Summary>
+    <Summary>Xamarin bindings for Google FlatBuffers Library.</Summary>
     <PackageTags>xamarin android flatbuffers</PackageTags>
     <Title>Xamarin.Google.FlatBuffers</Title>
-    <Description>Xamarin bindingds for Google FlatBuffers Library.</Description>
+    <Description>Xamarin bindings for Google FlatBuffers Library.</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
-      <Version>5.11.0</Version>
+      <Version>6.2.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
