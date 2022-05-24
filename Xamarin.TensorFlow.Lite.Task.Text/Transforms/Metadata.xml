@@ -7,4 +7,8 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
   <attr path="/api/package[@name='org.tensorflow.lite.task.text.qa']/class[@name='QaAnswer']/field[@name='pos']" name="managedName">Position</attr>
+  <attr path="/api/package[@name='org.tensorflow.lite.task.text.qa']/class[@name='QaAnswer.Pos']/method[@name='compareTo']/parameter[1]" name="managedType">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='org.tensorflow.lite.task.text.nlclassifier']" name="managedName">Xamarin.TensorFlow.Lite.Task.Text.NlClassifier</attr>
+  <attr path="/api/package[@name='org.tensorflow.lite.task.text.qa']" name="managedName">Xamarin.TensorFlow.Lite.Task.Text.Qa</attr>
+  <attr path="/api/package[@name='org.tensorflow.lite.task.text.searcher']" name="managedName">Xamarin.TensorFlow.Lite.Task.Text.Searcher</attr>
 </metadata>

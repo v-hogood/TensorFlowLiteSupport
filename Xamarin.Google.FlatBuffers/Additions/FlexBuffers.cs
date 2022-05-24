@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
-namespace Com.Google.Flatbuffers
+namespace Xamarin.Google.FlatBuffers
 {
 	public partial class FlexBuffers
 	{
@@ -11,12 +11,12 @@ namespace Com.Google.Flatbuffers
 		{
 			// Metadata.xml XPath method reference: path="/api/package[@name='com.google.flatbuffers']/class[@name='FlexBuffers.Map']/method[@name='empty' and count(parameter)=0]"
 			[Register ("empty", "()Lcom/google/flatbuffers/FlexBuffers$Map;", "")]
-			public static new unsafe global::Com.Google.Flatbuffers.FlexBuffers.Map Empty ()
+			public static new unsafe global::Xamarin.Google.FlatBuffers.FlexBuffers.Map Empty ()
 			{
 				const string __id = "empty.()Lcom/google/flatbuffers/FlexBuffers$Map;";
 				try {
 					var __rm = _members.StaticMethods.InvokeObjectMethod (__id, null);
-					return global::Java.Lang.Object.GetObject<global::Com.Google.Flatbuffers.FlexBuffers.Map> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Xamarin.Google.FlatBuffers.FlexBuffers.Map> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -26,12 +26,12 @@ namespace Com.Google.Flatbuffers
 		{
 			// Metadata.xml XPath method reference: path="/api/package[@name='com.google.flatbuffers']/class[@name='FlexBuffers.TypedVector']/method[@name='empty' and count(parameter)=0]"
 			[Register ("empty", "()Lcom/google/flatbuffers/FlexBuffers$TypedVector;", "")]
-			public static new unsafe global::Com.Google.Flatbuffers.FlexBuffers.TypedVector Empty ()
+			public static new unsafe global::Xamarin.Google.FlatBuffers.FlexBuffers.TypedVector Empty ()
 			{
 				const string __id = "empty.()Lcom/google/flatbuffers/FlexBuffers$TypedVector;";
 				try {
 					var __rm = _members.StaticMethods.InvokeObjectMethod (__id, null);
-					return global::Java.Lang.Object.GetObject<global::Com.Google.Flatbuffers.FlexBuffers.TypedVector> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Xamarin.Google.FlatBuffers.FlexBuffers.TypedVector> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

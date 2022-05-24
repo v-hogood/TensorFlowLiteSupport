@@ -6,6 +6,7 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+  <attr path="/api/package[@name='com.google.flatbuffers']" name="managedName">Xamarin.Google.FlatBuffers</attr>
   <attr path="/api/package[@name='com.google.flatbuffers']/class[@name='FlexBuffers.Object']" name="visibility">public</attr>
   <attr path="/api/package[@name='com.google.flatbuffers']/class[@name='FlexBuffers.Sized']" name="visibility">public</attr>
   <attr path="/api/package[@name='com.google.flatbuffers']/interface[@name='ReadWriteBuf']" name="visibility">public</attr>
