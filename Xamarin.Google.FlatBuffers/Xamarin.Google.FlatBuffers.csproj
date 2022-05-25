@@ -21,7 +21,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>Xamarin.Google.FlatBuffers</PackageId>
-    <PackageVersion>1.12.0</PackageVersion>
+    <PackageVersion>2.0.3</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/google/flatbuffers/blob/master/LICENSE.txt</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -67,7 +67,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\flatbuffers-java-1.12.0.jar" />
+    <EmbeddedJar Include="Jars\flatbuffers-java-2.0.3.jar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
