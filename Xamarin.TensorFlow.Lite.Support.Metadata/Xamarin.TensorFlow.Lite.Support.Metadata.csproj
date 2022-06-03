@@ -21,7 +21,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>Xamarin.TensorFlow.Lite.Support.Metadata</PackageId>
-    <PackageVersion>0.4.0</PackageVersion>
+    <PackageVersion>0.4.1</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -66,7 +66,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\tensorflow-lite-metadata-0.4.0.jar" />
+    <EmbeddedJar Include="Jars\tensorflow-lite-metadata-0.4.1.jar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
