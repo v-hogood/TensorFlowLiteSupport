@@ -1,0 +1,5 @@
+framework module TensorFlowLiteTaskTextC {
+  umbrella header "TensorFlowLiteTaskTextC.h"
+  export *
+  module * { export * }
+}
