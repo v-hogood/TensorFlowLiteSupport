@@ -1,0 +1,10 @@
+#import <TensorFlowLiteTaskAudio/TFLAudioClassifier.h>
+#import <TensorFlowLiteTaskAudio/TFLAudioFormat.h>
+#import <TensorFlowLiteTaskAudio/TFLAudioRecord.h>
+#import <TensorFlowLiteTaskAudio/TFLAudioTensor.h>
+#import <TensorFlowLiteTaskAudio/TFLBaseOptions.h>
+#import <TensorFlowLiteTaskAudio/TFLCategory.h>
+#import <TensorFlowLiteTaskAudio/TFLClassificationOptions.h>
+#import <TensorFlowLiteTaskAudio/TFLClassificationResult.h>
+#import <TensorFlowLiteTaskAudio/TFLCommon.h>
+#import <TensorFlowLiteTaskAudio/TFLFloatBuffer.h>

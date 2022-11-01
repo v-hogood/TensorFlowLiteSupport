@@ -1,0 +1,5 @@
+framework module TensorFlowLiteTaskAudio {
+  umbrella header "TensorFlowLiteTaskAudio.h"
+  export *
+  module * { export * }
+}
