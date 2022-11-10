@@ -1,5 +1,0 @@
-framework module TensorFlowLiteTaskVisionC {
-  umbrella header "TensorFlowLiteTaskVisionC.h"
-  export *
-  module * { export * }
-}

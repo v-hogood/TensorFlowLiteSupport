@@ -4,7 +4,6 @@ using CoreMedia;
 using CoreVideo;
 using Foundation;
 using ObjCRuntime;
-using TensorFlowLiteTaskVision;
 using UIKit;
 
 namespace TensorFlowLiteTaskVision
@@ -58,13 +57,39 @@ namespace TensorFlowLiteTaskVision
 		IntPtr Constructor (CMSampleBuffer sampleBuffer);
 	}
 
+	// @interface TFLExternalFile : NSObject <NSCopying>
+	[BaseType (typeof(NSObject))]
+	interface TFLExternalFile : INSCopying
+	{
+		// @property (copy, nonatomic) NSString * _Nonnull filePath;
+		[Export ("filePath")]
+		string FilePath { get; set; }
+	}
+
+	// @interface TFLCoreMLDelegateSettings : NSObject <NSCopying>
+	[BaseType (typeof(NSObject))]
+	interface TFLCoreMLDelegateSettings : INSCopying
+	{
+		// -(instancetype _Nonnull)initWithCoreMLVersion:(int32_t)coreMLVersion enableddevices:(CoreMLDelegateEnabledDevices)enabledDevices;
+		[Export ("initWithCoreMLVersion:enableddevices:")]
+		IntPtr Constructor (int coreMLVersion, CoreMLDelegateEnabledDevices enabledDevices);
+
+		// @property (readonly, nonatomic) CoreMLDelegateEnabledDevices enabledDevices;
+		[Export ("enabledDevices")]
+		CoreMLDelegateEnabledDevices EnabledDevices { get; }
+
+		// @property (readonly, nonatomic) int32_t coreMLVersion;
+		[Export ("coreMLVersion")]
+		int CoreMLVersion { get; }
+	}
+
 	// @interface TFLCpuSettings : NSObject <NSCopying>
 	[BaseType (typeof(NSObject))]
 	interface TFLCpuSettings : INSCopying
 	{
-		// @property (nonatomic) int numThreads;
+		// @property (nonatomic) NSInteger numThreads;
 		[Export ("numThreads")]
-		int NumThreads { get; set; }
+		nint NumThreads { get; set; }
 	}
 
 	// @interface TFLComputeSettings : NSObject <NSCopying>
@@ -74,15 +99,6 @@ namespace TensorFlowLiteTaskVision
 		// @property (copy, nonatomic) TFLCpuSettings * _Nonnull cpuSettings;
 		[Export ("cpuSettings", ArgumentSemantic.Copy)]
 		TFLCpuSettings CpuSettings { get; set; }
-	}
-
-	// @interface TFLExternalFile : NSObject <NSCopying>
-	[BaseType (typeof(NSObject))]
-	interface TFLExternalFile : INSCopying
-	{
-		// @property (copy, nonatomic) NSString * _Nonnull filePath;
-		[Export ("filePath")]
-		string FilePath { get; set; }
 	}
 
 	// @interface TFLBaseOptions : NSObject <NSCopying>
@@ -96,6 +112,10 @@ namespace TensorFlowLiteTaskVision
 		// @property (copy, nonatomic) TFLComputeSettings * _Nonnull computeSettings;
 		[Export ("computeSettings", ArgumentSemantic.Copy)]
 		TFLComputeSettings ComputeSettings { get; set; }
+
+		// @property (copy, nonatomic) TFLCoreMLDelegateSettings * _Nullable coreMLDelegateSettings;
+		[NullAllowed, Export ("coreMLDelegateSettings", ArgumentSemantic.Copy)]
+		TFLCoreMLDelegateSettings CoreMLDelegateSettings { get; set; }
 	}
 
 	// @interface TFLCategory : NSObject
@@ -219,6 +239,19 @@ namespace TensorFlowLiteTaskVision
 		IntPtr Constructor (TFLDetection[] detections);
 	}
 
+	// @interface TFLEmbeddingOptions : NSObject <NSCopying>
+	[BaseType (typeof(NSObject))]
+	interface TFLEmbeddingOptions : INSCopying
+	{
+		// @property (nonatomic) BOOL l2Normalize;
+		[Export ("l2Normalize")]
+		bool L2Normalize { get; set; }
+
+		// @property (nonatomic) BOOL quantize;
+		[Export ("quantize")]
+		bool Quantize { get; set; }
+	}
+
 	// @interface TFLImageClassifierOptions : NSObject
 	[BaseType (typeof(NSObject))]
 	interface TFLImageClassifierOptions
@@ -256,6 +289,96 @@ namespace TensorFlowLiteTaskVision
 		[Export ("classifyWithGMLImage:regionOfInterest:error:")]
 		[return: NullAllowed]
 		TFLClassificationResult ClassifyWithGMLImage (GMLImage image, CGRect roi, [NullAllowed] out NSError error);
+	}
+
+	// @interface TFLSearchOptions : NSObject <NSCopying>
+	[BaseType (typeof(NSObject))]
+	interface TFLSearchOptions : INSCopying
+	{
+		// @property (copy, nonatomic) TFLExternalFile * _Nonnull indexFile;
+		[Export ("indexFile", ArgumentSemantic.Copy)]
+		TFLExternalFile IndexFile { get; set; }
+
+		// @property (nonatomic) NSInteger maxResults;
+		[Export ("maxResults")]
+		nint MaxResults { get; set; }
+	}
+
+	// @interface TFLNearestNeighbor : NSObject
+	[BaseType (typeof(NSObject))]
+	[DisableDefaultCtor]
+	interface TFLNearestNeighbor
+	{
+		// @property (readonly, nonatomic) NSString * _Nonnull metadata;
+		[Export ("metadata")]
+		string Metadata { get; }
+
+		// @property (readonly, nonatomic) CGFloat distance;
+		[Export ("distance")]
+		nfloat Distance { get; }
+
+		// -(instancetype _Nonnull)initWithMetadata:(NSString * _Nonnull)metadata distance:(CGFloat)distance __attribute__((objc_designated_initializer));
+		[Export ("initWithMetadata:distance:")]
+		[DesignatedInitializer]
+		IntPtr Constructor (string metadata, nfloat distance);
+	}
+
+	// @interface TFLSearchResult : NSObject
+	[BaseType (typeof(NSObject))]
+	[DisableDefaultCtor]
+	interface TFLSearchResult
+	{
+		// @property (readonly, nonatomic) NSArray<TFLNearestNeighbor *> * _Nonnull nearestNeighbors;
+		[Export ("nearestNeighbors")]
+		TFLNearestNeighbor[] NearestNeighbors { get; }
+
+		// -(instancetype _Nonnull)initWithNearestNeighbors:(NSArray<TFLNearestNeighbor *> * _Nonnull)nearestNeighbors __attribute__((objc_designated_initializer));
+		[Export ("initWithNearestNeighbors:")]
+		[DesignatedInitializer]
+		IntPtr Constructor (TFLNearestNeighbor[] nearestNeighbors);
+	}
+
+	// @interface TFLImageSearcherOptions : NSObject
+	[BaseType (typeof(NSObject))]
+	interface TFLImageSearcherOptions
+	{
+		// @property (copy, nonatomic) TFLBaseOptions * _Nonnull baseOptions;
+		[Export ("baseOptions", ArgumentSemantic.Copy)]
+		TFLBaseOptions BaseOptions { get; set; }
+
+		// @property (copy, nonatomic) TFLEmbeddingOptions * _Nonnull embeddingOptions;
+		[Export ("embeddingOptions", ArgumentSemantic.Copy)]
+		TFLEmbeddingOptions EmbeddingOptions { get; set; }
+
+		// @property (copy, nonatomic) TFLSearchOptions * _Nonnull searchOptions;
+		[Export ("searchOptions", ArgumentSemantic.Copy)]
+		TFLSearchOptions SearchOptions { get; set; }
+
+		// -(instancetype _Nonnull)initWithModelPath:(NSString * _Nonnull)modelPath;
+		[Export ("initWithModelPath:")]
+		IntPtr Constructor (string modelPath);
+	}
+
+	// @interface TFLImageSearcher : NSObject
+	[BaseType (typeof(NSObject))]
+	[DisableDefaultCtor]
+	interface TFLImageSearcher
+	{
+		// +(instancetype _Nullable)imageSearcherWithOptions:(TFLImageSearcherOptions * _Nonnull)options error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("searcher(options:)")));
+		[Static]
+		[Export ("imageSearcherWithOptions:error:")]
+		[return: NullAllowed]
+		TFLImageSearcher ImageSearcherWithOptions (TFLImageSearcherOptions options, [NullAllowed] out NSError error);
+
+		// -(TFLSearchResult * _Nullable)searchWithGMLImage:(GMLImage * _Nonnull)image error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("search(mlImage:)")));
+		[Export ("searchWithGMLImage:error:")]
+		[return: NullAllowed]
+		TFLSearchResult SearchWithGMLImage (GMLImage image, [NullAllowed] out NSError error);
+
+		// -(TFLSearchResult * _Nullable)searchWithGMLImage:(GMLImage * _Nonnull)image regionOfInterest:(CGRect)roi error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("search(mlImage:regionOfInterest:)")));
+		[Export ("searchWithGMLImage:regionOfInterest:error:")]
+		[return: NullAllowed]
+		TFLSearchResult SearchWithGMLImage (GMLImage image, CGRect roi, [NullAllowed] out NSError error);
 	}
 
 	// @interface TFLConfidenceMask : NSObject

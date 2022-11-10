@@ -1,7 +1,6 @@
 using System;
 using Foundation;
 using ObjCRuntime;
-using TensorFlowLiteTaskAudio;
 
 namespace TensorFlowLiteTaskAudio
 {
@@ -112,6 +111,15 @@ namespace TensorFlowLiteTaskAudio
 		bool LoadBuffer (TFLFloatBuffer buffer, nuint offset, nuint size, [NullAllowed] out NSError error);
 	}
 
+	// @interface TFLExternalFile : NSObject <NSCopying>
+	[BaseType (typeof(NSObject))]
+	interface TFLExternalFile : INSCopying
+	{
+		// @property (copy, nonatomic) NSString * _Nonnull filePath;
+		[Export ("filePath")]
+		string FilePath { get; set; }
+	}
+
 	// @interface TFLCoreMLDelegateSettings : NSObject <NSCopying>
 	[BaseType (typeof(NSObject))]
 	interface TFLCoreMLDelegateSettings : INSCopying
@@ -145,15 +153,6 @@ namespace TensorFlowLiteTaskAudio
 		// @property (copy, nonatomic) TFLCpuSettings * _Nonnull cpuSettings;
 		[Export ("cpuSettings", ArgumentSemantic.Copy)]
 		TFLCpuSettings CpuSettings { get; set; }
-	}
-
-	// @interface TFLExternalFile : NSObject <NSCopying>
-	[BaseType (typeof(NSObject))]
-	interface TFLExternalFile : INSCopying
-	{
-		// @property (copy, nonatomic) NSString * _Nonnull filePath;
-		[Export ("filePath")]
-		string FilePath { get; set; }
 	}
 
 	// @interface TFLBaseOptions : NSObject <NSCopying>
