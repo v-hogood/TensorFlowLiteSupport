@@ -21,7 +21,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>Xamarin.Google.FlatBuffers</PackageId>
-    <PackageVersion>2.0.3</PackageVersion>
+    <PackageVersion>2.0.8</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/google/flatbuffers/blob/master/LICENSE.txt</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -51,11 +51,9 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
-    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Additions\FlexBuffers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
@@ -67,11 +65,11 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\flatbuffers-java-2.0.3.jar" />
+    <EmbeddedJar Include="Jars\flatbuffers-java-2.0.8.jar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
-      <Version>6.3.0</Version>
+      <Version>6.4.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -84,4 +82,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="DownloadFile" BeforeTargets="_CreateBindingResourceArchive">
+    <DownloadFile SourceUrl="https://repo1.maven.org/maven2/com/google/flatbuffers/flatbuffers-java/2.0.8/flatbuffers-java-2.0.8.jar" DestinationFolder="Jars" />
+  </Target>
 </Project>

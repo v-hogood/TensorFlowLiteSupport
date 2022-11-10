@@ -21,7 +21,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>Xamarin.TensorFlow.Lite.Gpu.Delegate.Plugin</PackageId>
-    <PackageVersion>0.4.2</PackageVersion>
+    <PackageVersion>0.4.3</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -51,7 +51,6 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
-    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,11 +65,11 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\tensorflow-lite-gpu-delegate-plugin-0.4.2.aar" />
+    <LibraryProjectZip Include="Jars\tensorflow-lite-gpu-delegate-plugin-0.4.3.aar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
-      <Version>6.3.0</Version>
+      <Version>6.4.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -83,4 +82,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="DownloadFile" BeforeTargets="_CreateBindingResourceArchive">
+    <DownloadFile SourceUrl="https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-gpu-delegate-plugin/0.4.3/tensorflow-lite-gpu-delegate-plugin-0.4.3.aar" DestinationFolder="Jars" />
+  </Target>
 </Project>

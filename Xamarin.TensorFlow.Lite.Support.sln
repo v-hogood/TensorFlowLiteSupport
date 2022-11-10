@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.808.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Support", "Xamarin.TensorFlow.Lite.Support\Xamarin.TensorFlow.Lite.Support.csproj", "{65CE2751-4545-4FA9-89ED-5E82846972A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Support.Metadata", "Xamarin.TensorFlow.Lite.Support.Metadata\Xamarin.TensorFlow.Lite.Support.Metadata.csproj", "{D715F23E-FD2D-492D-A4E7-212B5F1CCA50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.TensorFlow.Lite.Metadata", "Xamarin.TensorFlow.Lite.Metadata\Xamarin.TensorFlow.Lite.Metadata.csproj", "{D715F23E-FD2D-492D-A4E7-212B5F1CCA50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Google.FlatBuffers", "Xamarin.Google.FlatBuffers\Xamarin.Google.FlatBuffers.csproj", "{830A3C89-E456-4443-8263-EC31777CA79A}"
 EndProject
