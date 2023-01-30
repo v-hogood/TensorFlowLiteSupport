@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorFlowLiteTaskText", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorFlowLiteTaskVision", "TensorFlowLiteTaskVision\TensorFlowLiteTaskVision.csproj", "{ADF50CFE-E601-4DCD-B157-A877C18E1F26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorFlowLite", "TensorFlowLite\TensorFlowLite.csproj", "{87E8C9C2-13E1-4287-B12A-AD85B586BF31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorFlowLiteSelectTfOps", "TensorFlowLiteSelectTfOps\TensorFlowLiteSelectTfOps.csproj", "{A1911184-0AE8-4407-877E-D4544F0FA602}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{ADF50CFE-E601-4DCD-B157-A877C18E1F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADF50CFE-E601-4DCD-B157-A877C18E1F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADF50CFE-E601-4DCD-B157-A877C18E1F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E8C9C2-13E1-4287-B12A-AD85B586BF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E8C9C2-13E1-4287-B12A-AD85B586BF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E8C9C2-13E1-4287-B12A-AD85B586BF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E8C9C2-13E1-4287-B12A-AD85B586BF31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1911184-0AE8-4407-877E-D4544F0FA602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1911184-0AE8-4407-877E-D4544F0FA602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1911184-0AE8-4407-877E-D4544F0FA602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1911184-0AE8-4407-877E-D4544F0FA602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
