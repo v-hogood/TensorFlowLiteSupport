@@ -84,8 +84,4 @@
       </Content>
     </ItemGroup>
   </Target>
-  <Target Name="DownloadFile" BeforeTargets="BeforeBuild">
-    <DownloadFile SourceUrl="https://dl.google.com/dl/cpdc/cb66bf4f8db100a3/TensorFlowLiteSelectTfOps-2.6.0.tar.gz" DestinationFolder="." />
-    <Exec Command="tar -xf TensorFlowLiteSelectTfOps-2.6.0.tar.gz --strip-components=1" />
-  </Target>
 </Project>
