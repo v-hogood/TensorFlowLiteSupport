@@ -69,16 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Tasks.Pack">
-      <Version>6.4.0</Version>
+      <Version>6.5.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Google.FlatBuffers\Google.FlatBuffers.csproj">
-      <Project>{830A3C89-E456-4443-8263-EC31777CA79A}</Project>
-      <Name>Google.FlatBuffers</Name>
-    </ProjectReference>
+    <PackageReference Include="Xamarin.Google.FlatBuffers.Java">
+      <Version>22.11.23.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
