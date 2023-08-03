@@ -1,100 +1,55 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{87E8C9C2-13E1-4287-B12A-AD85B586BF31}</ProjectGuid>
-    <TemplateGuid>{b6f3ff35-79b2-4f25-a2fc-60a7cf61013b}</TemplateGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>TensorFlowLite</RootNamespace>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>TensorFlowLite</AssemblyName>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>TensorFlowLite.iOS</PackageId>
-    <PackageVersion>2.6.0</PackageVersion>
+    <PackageVersion>2.13.0</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
     <RepositoryUrl>https://github.com/tensorflow/tflite-support</RepositoryUrl>
     <PackageProjectUrl>https://github.com/v-hogood/TensorFlowLiteSupport</PackageProjectUrl>
-    <Summary>Xamarin iOS bindings for TensorFlow Lite Library.</Summary>
+    <Summary>iOS .NET bindings for TensorFlow Lite Library.</Summary>
     <PackageTags>xamarin ios tensorflow</PackageTags>
     <Title>TensorFlowLite</Title>
-    <Description>Xamarin iOS bindings for TensorFlow Lite Library.</Description>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <Description>iOS .NET bindings for TensorFlow Lite Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack">
-      <Version>6.4.0</Version>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="TensorFlowLite.framework">
-      <Kind>Framework</Kind>
+    <NativeReference Include="TFLTensorFlowLite.xcframework">
+      <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
       <LinkerFlags>-ObjC</LinkerFlags>
     </NativeReference>
-    <NativeReference Include="Frameworks\TensorFlowLiteC.framework">
-      <Kind>Framework</Kind>
+    <NativeReference Include="Frameworks/TensorFlowLiteC.xcframework">
+      <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
       <IsCxx>True</IsCxx>
     </NativeReference>
-    <NativeReference Include="Frameworks\TensorFlowLiteCMetal.framework">
-      <Kind>Framework</Kind>
+    <NativeReference Include="Frameworks/TensorFlowLiteCCoreML.xcframework">
+      <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
       <IsCxx>True</IsCxx>
+      <Frameworks>CoreML</Frameworks>
     </NativeReference>
-    <NativeReference Include="Frameworks\TensorFlowLiteCCoreML.framework">
-      <Kind>Framework</Kind>
+    <NativeReference Include="Frameworks/TensorFlowLiteCMetal.xcframework">
+      <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
       <IsCxx>True</IsCxx>
     </NativeReference>
   </ItemGroup>
-  <Target Name="RemoveInvalidManifest" AfterTargets="BuiltProjectOutputGroup">
-    <ItemGroup Condition="!Exists('$(OutDir)$(_DeploymentTargetApplicationManifestFileName)')">
-      <BuiltProjectOutputGroupOutput Remove="$([System.IO.Path]::GetFullPath('$(OutDir)$(_DeploymentTargetApplicationManifestFileName)'))" />
-    </ItemGroup>
-  </Target>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
   <Target Name="DownloadFile" BeforeTargets="BeforeBuild">
-    <DownloadFile SourceUrl="https://dl.google.com/dl/cpdc/3895e5bf508673ae/TensorFlowLiteC-2.6.0.tar.gz" DestinationFolder="." />
-    <Exec Command="tar -xf TensorFlowLiteC-2.6.0.tar.gz --strip-components=1 TensorFlowLiteC-2.6.0/Frameworks/TensorFlowLiteC.framework" />
+    <DownloadFile SourceUrl="https://dl.google.com/tflite-release/ios/prod/tensorflow/lite/release/ios/release/28/20230707-140347/TensorFlowLiteC/2.13.0/ee5f7d501376cea8/TensorFlowLiteC-2.13.0.tar.gz" DestinationFolder="." />
+    <Exec Command="tar -xf TensorFlowLiteC-2.13.0.tar.gz --strip-components=1" />
   </Target>
 </Project>

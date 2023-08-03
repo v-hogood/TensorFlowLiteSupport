@@ -23,6 +23,22 @@ namespace TensorFlowLite
 	}
 
 	[Native]
+	public enum TFLSignatureRunnerErrorCode : ulong
+	{
+		InvalidInputByteSize,
+		InvalidShape,
+		FailedToCreateSignatureRunner,
+		FailedToInvoke,
+		FailedToGetTensor,
+		InvalidTensor,
+		FailedToResizeInputTensor,
+		FailedToCopyDataToInputTensor,
+		CopyDataToOutputTensorNotAllowed,
+		FailedToGetDataFromTensor,
+		FailedToAllocateTensors
+	}
+
+	[Native]
 	public enum TFLTensorDataType : ulong
 	{
 		NoType,

@@ -14,6 +14,7 @@
 #import "TFLInterpreter.h"
 #import "TFLInterpreterOptions.h"
 #import "TFLQuantizationParameters.h"
+#import "TFLSignatureRunner.h"
 #import "TFLTensor.h"
 #import "TFLTensorFlowLite.h"
 
