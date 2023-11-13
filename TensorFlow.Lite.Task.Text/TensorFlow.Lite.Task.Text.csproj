@@ -19,9 +19,6 @@
     <Description>Android .NET bindings for TensorFlow Lite Task Text Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TensorFlow.Lite.Support\TensorFlow.Lite.Support.csproj" />
     <ProjectReference Include="..\TensorFlow.Lite.Task.Base\TensorFlow.Lite.Task.Base.csproj" />
   </ItemGroup>

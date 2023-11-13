@@ -19,9 +19,8 @@
     <Description>Android .NET bindings for TensorFlow Lite Task Vision Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
-    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.5-beta1" />
-    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.12.0.2" />
+    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.6-beta1" />
+    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TensorFlow.Lite.Support\TensorFlow.Lite.Support.csproj" />

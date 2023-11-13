@@ -23,9 +23,6 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
-  </ItemGroup>
-  <ItemGroup>
     <NativeReference Include="Frameworks/TensorFlowLiteTaskText.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>

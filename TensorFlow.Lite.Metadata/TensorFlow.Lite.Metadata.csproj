@@ -19,8 +19,7 @@
     <Description>Android .NET bindings for TensorFlow Lite Metadata Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
-    <PackageReference Include="Xamarin.Google.FlatBuffers.Java" Version="23.5.26.1" />
+    <PackageReference Include="Xamarin.Google.FlatBuffers.Java" Version="23.5.26.2" />
   </ItemGroup>
   <Target Name="DownloadFile" BeforeTargets="_ExtractAar">
     <DownloadFile SourceUrl="https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-metadata/0.4.4/tensorflow-lite-metadata-0.4.4.jar" DestinationFolder="Jars" />

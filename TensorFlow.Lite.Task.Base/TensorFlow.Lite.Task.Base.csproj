@@ -18,9 +18,6 @@
     <Title>TensorFlow.Lite.Task.Base</Title>
     <Description>Android .NET bindings for TensorFlow Lite Task Base Library.</Description>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
-  </ItemGroup>
   <Target Name="DownloadFile" BeforeTargets="_ExtractAar">
     <DownloadFile SourceUrl="https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-task-base/0.4.4/tensorflow-lite-task-base-0.4.4.aar" DestinationFolder="Jars" />
   </Target>

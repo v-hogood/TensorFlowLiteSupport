@@ -19,8 +19,7 @@
     <Description>Android .NET bindings for TensorFlow Lite Task Audio Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
-    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.12.0.2" />
+    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TensorFlow.Lite.Support\TensorFlow.Lite.Support.csproj" />

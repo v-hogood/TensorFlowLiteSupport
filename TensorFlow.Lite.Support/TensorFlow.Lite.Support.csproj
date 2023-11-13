@@ -20,9 +20,8 @@
     <Description>Android .NET bindings for TensorFlow Lite Support Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.6.1" />
-    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.5-beta1" />
-    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.12.0.2" />
+    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.6-beta1" />
+    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.13.0.1" />
   </ItemGroup>
   <Target Name="DownloadFile" BeforeTargets="_ExtractAar">
     <DownloadFile SourceUrl="https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-support-api/0.4.4/tensorflow-lite-support-api-0.4.4.aar" DestinationFolder="Jars" />
