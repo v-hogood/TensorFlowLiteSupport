@@ -7,7 +7,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>TensorFlowLite.iOS</PackageId>
-    <PackageVersion>2.13.0</PackageVersion>
+    <PackageVersion>2.14.0</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -46,7 +46,7 @@
     </NativeReference>
   </ItemGroup>
   <Target Name="DownloadFile" BeforeTargets="BeforeBuild">
-    <DownloadFile SourceUrl="https://dl.google.com/tflite-release/ios/prod/tensorflow/lite/release/ios/release/28/20230707-140347/TensorFlowLiteC/2.13.0/ee5f7d501376cea8/TensorFlowLiteC-2.13.0.tar.gz" DestinationFolder="." />
-    <Exec Command="tar -xf TensorFlowLiteC-2.13.0.tar.gz --strip-components=1" />
+    <DownloadFile SourceUrl="https://dl.google.com/tflite-release/ios/prod/tensorflow/lite/release/ios/release/30/20231002-210715/TensorFlowLiteC/2.14.0/883c6fc838e0354b/TensorFlowLiteC-2.14.0.tar.gz" DestinationFolder="." />
+    <Exec Command="tar -xf TensorFlowLiteC-2.14.0.tar.gz --strip-components=1" />
   </Target>
 </Project>

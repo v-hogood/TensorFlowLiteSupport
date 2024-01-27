@@ -7,7 +7,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>TensorFlowLiteSelectTfOps.iOS</PackageId>
-    <PackageVersion>2.13.0</PackageVersion>
+    <PackageVersion>2.14.0</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -33,7 +33,7 @@
     </NativeReference>
   </ItemGroup>
   <Target Name="DownloadFile" BeforeTargets="BeforeBuild">
-    <DownloadFile SourceUrl="https://dl.google.com/tflite-release/ios/prod/tensorflow/lite/release/ios/release/28/20230707-140347/TensorFlowLiteSelectTfOps/2.13.0/f7ed69e4d922c040/TensorFlowLiteSelectTfOps-2.13.0.tar.gz" DestinationFolder="." />
-    <Exec Command="tar -xf TensorFlowLiteSelectTfOps-2.13.0.tar.gz --strip-components=1" />
+    <DownloadFile SourceUrl="https://dl.google.com/tflite-release/ios/prod/tensorflow/lite/release/ios/release/30/20231002-210715/TensorFlowLiteSelectTfOps/2.14.0/e43d76a7247eec5c/TensorFlowLiteSelectTfOps-2.14.0.tar.gz" DestinationFolder="." />
+    <Exec Command="tar -xf TensorFlowLiteSelectTfOps-2.14.0.tar.gz --strip-components=1" />
   </Target>
 </Project>
