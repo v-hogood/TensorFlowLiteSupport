@@ -17,10 +17,12 @@
     <PackageTags>xamarin ios tensorflow</PackageTags>
     <Title>TensorFlowLiteSelectTfOps</Title>
     <Description>iOS .NET bindings for TensorFlow Lite SelectTfOps Library.</Description>
+    <PackageReadmeFile>TensorFlowLiteSelectTfOps.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+    <None Include="TensorFlowLiteSelectTfOps.md" Pack="true" PackagePath="/" />
   </ItemGroup>
   <Target Name="AddResources" AfterTargets="CopyFilesToOutputDirectory">
     <ItemGroup>

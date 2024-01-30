@@ -17,10 +17,12 @@
     <PackageTags>xamarin ios tensorflow</PackageTags>
     <Title>TensorFlowLite</Title>
     <Description>iOS .NET bindings for TensorFlow Lite Library.</Description>
+    <PackageReadmeFile>TensorFlowLite.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+    <None Include="TensorFlowLite.md" Pack="true" PackagePath="/" />
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="TFLTensorFlowLite.xcframework">
