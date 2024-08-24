@@ -50,6 +50,7 @@ namespace TensorFlowLite
 		Bool,
 		Int16,
 		Int8,
-		Float64
+		Float64,
+		BFloat16
 	}
 }
