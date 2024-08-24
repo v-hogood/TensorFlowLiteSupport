@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-android</TargetFramework>
+    <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -19,8 +19,8 @@
     <Description>Android .NET bindings for TensorFlow Lite Task Vision Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.6-beta1" />
-    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.13.0.1" />
+    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.11-beta1" />
+    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.16.1.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TensorFlow.Lite.Support\TensorFlow.Lite.Support.csproj" />

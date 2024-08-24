@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="DownloadFile" BeforeTargets="BeforeBuild">
-    <DownloadFile SourceUrl="https://dl.google.com/tflite-release/ios/prod/tensorflow/lite/release/ios/release/30/20231002-210715/TensorFlowLiteSelectTfOps/2.14.0/e43d76a7247eec5c/TensorFlowLiteSelectTfOps-2.14.0.tar.gz" DestinationFolder="$(MSBuildThisFileDirectory)../contentFiles" />
-    <Exec Command="tar -xf $(MSBuildThisFileDirectory)../contentFiles/TensorFlowLiteSelectTfOps-2.14.0.tar.gz -C $(BaseIntermediateOutputPath) --strip-components=2 TensorFlowLiteSelectTfOps-2.14.0/Frameworks/TensorFlowLiteSelectTfOps.xcframework" />
+    <DownloadFile SourceUrl="https://dl.google.com/tflite-release/ios/prod/tensorflow/lite/release/ios/release/32/20240729-115310/TensorFlowLiteSelectTfOps/2.17.0/224693067351224e/TensorFlowLiteSelectTfOps-2.17.0.tar.gz" DestinationFolder="$(MSBuildThisFileDirectory)../contentFiles" />
+    <Exec Command="tar -xf $(MSBuildThisFileDirectory)../contentFiles/TensorFlowLiteSelectTfOps-2.17.0.tar.gz -C $(BaseIntermediateOutputPath) --strip-components=2 TensorFlowLiteSelectTfOps-2.17.0/Frameworks/TensorFlowLiteSelectTfOps.xcframework" />
     <ItemGroup>
       <NativeReference Include="$(BaseIntermediateOutputPath)TensorFlowLiteSelectTfOps.xcframework">
         <Kind>Framework</Kind>
