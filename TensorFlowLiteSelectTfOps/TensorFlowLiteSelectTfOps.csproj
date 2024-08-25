@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/tensorflow/tflite-support</RepositoryUrl>
     <PackageProjectUrl>https://github.com/v-hogood/TensorFlowLiteSupport</PackageProjectUrl>
     <Summary>iOS .NET bindings for TensorFlow Lite SelectTfOps Library.</Summary>
-    <PackageTags>xamarin ios tensorflow</PackageTags>
+    <PackageTags>maui xamarin ios tensorflow</PackageTags>
     <Title>TensorFlowLiteSelectTfOps</Title>
     <Description>iOS .NET bindings for TensorFlow Lite SelectTfOps Library.</Description>
     <PackageReadmeFile>TensorFlowLiteSelectTfOps.md</PackageReadmeFile>

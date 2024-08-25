@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/tensorflow/tflite-support</RepositoryUrl>
     <PackageProjectUrl>https://github.com/v-hogood/TensorFlowLiteSupport</PackageProjectUrl>
     <Summary>iOS .NET bindings for TensorFlow Lite Task Audio Library.</Summary>
-    <PackageTags>xamarin ios tensorflow</PackageTags>
+    <PackageTags>maui xamarin ios tensorflow</PackageTags>
     <Title>TensorFlowLiteTaskAudio</Title>
     <Description>iOS .NET bindings for TensorFlow Lite Task Audio Library.</Description>
     <NoWarn>8767</NoWarn>

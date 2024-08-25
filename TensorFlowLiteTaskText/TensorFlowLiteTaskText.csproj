@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/tensorflow/tflite-support</RepositoryUrl>
     <PackageProjectUrl>https://github.com/v-hogood/TensorFlowLiteSupport</PackageProjectUrl>
     <Summary>iOS .NET bindings for TensorFlow Lite Task Text Library.</Summary>
-    <PackageTags>xamarin ios tensorflow</PackageTags>
+    <PackageTags>maui xamarin ios tensorflow</PackageTags>
     <Title>TensorFlowLiteTaskText</Title>
     <Description>.NET iOS bindings for TensorFlow Lite Task Text Library.</Description>
   </PropertyGroup>

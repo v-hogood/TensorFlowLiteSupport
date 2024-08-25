@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/tensorflow/tflite-support</RepositoryUrl>
     <PackageProjectUrl>https://github.com/v-hogood/TensorFlowLiteSupport</PackageProjectUrl>
     <Summary>Android .NET bindings for TensorFlow Lite Task Text Library.</Summary>
-    <PackageTags>xamarin android tensorflow</PackageTags>
+    <PackageTags>maui xamarin android tensorflow</PackageTags>
     <Title>TensorFlow.Lite.Task.Text</Title>
     <Description>Android .NET bindings for TensorFlow Lite Task Text Library.</Description>
   </PropertyGroup>
