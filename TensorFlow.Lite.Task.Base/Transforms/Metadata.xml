@@ -10,4 +10,5 @@
   <attr path="/api/package[@name='org.tensorflow.lite.task.core']" name="managedName">TensorFlow.Lite.Task.Base</attr>
   <attr path="/api/package[@name='org.tensorflow.lite.task.core.annotations']" name="managedName">TensorFlow.Lite.Task.Base.Annotations</attr>
   <attr path="/api/package[@name='org.tensorflow.lite.task.core.vision']" name="managedName">TensorFlow.Lite.Task.Base.Vision</attr>
+  <attr path="/api/package[@name='org.tensorflow.lite.task.processor']" name="managedName">TensorFlow.Lite.Task.Processor</attr>
 </metadata>
