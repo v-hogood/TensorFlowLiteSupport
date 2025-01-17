@@ -7,7 +7,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>TensorFlow.Lite.Task.Vision</PackageId>
-    <PackageVersion>0.4.4</PackageVersion>
+    <PackageVersion>0.4.4.1</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -19,14 +19,7 @@
     <Description>Android .NET bindings for TensorFlow Lite Task Vision Library.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.11-beta1" />
-    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="2.16.1.1" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TensorFlow.Lite.Support\TensorFlow.Lite.Support.csproj" />
     <ProjectReference Include="..\TensorFlow.Lite.Task.Base\TensorFlow.Lite.Task.Base.csproj" />
   </ItemGroup>
-  <Target Name="DownloadFile" BeforeTargets="_ExtractAar">
-    <DownloadFile SourceUrl="https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-task-vision/0.4.4/tensorflow-lite-task-vision-0.4.4.aar" DestinationFolder="Jars" />
-  </Target>
 </Project>

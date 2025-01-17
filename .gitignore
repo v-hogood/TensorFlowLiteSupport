@@ -1,7 +1,7 @@
 bin
 obj
 .vs
-*.aar
+*0.4.4.aar
 *.jar
 *.tar.gz
 Frameworks
