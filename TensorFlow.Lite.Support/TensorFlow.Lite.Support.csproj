@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
+    <TargetFramework>net9.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -8,7 +8,7 @@
     <PackOnBuild>true</PackOnBuild>
     <GeneratePackageOnBuild>$(PackOnBuild)</GeneratePackageOnBuild>
     <PackageId>TensorFlow.Lite.Support</PackageId>
-    <PackageVersion>0.4.4.1</PackageVersion>
+    <PackageVersion>0.4.4.2</PackageVersion>
     <Authors>Howard Good</Authors>
     <PackageLicenseUrl>https://github.com/tensorflow/tflite-support/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>https://www.nuget.org/profiles/v-hogood</Owners>
@@ -18,10 +18,11 @@
     <PackageTags>maui xamarin android tensorflow</PackageTags>
     <Title>TensorFlow.Lite.Support</Title>
     <Description>Android .NET bindings for TensorFlow Lite Support Library.</Description>
+    <NoWarn>BG8403</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.AI.Edge.LiteRT" Version="1.0.1" />
-    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.13-beta1" />
+    <PackageReference Include="Xamarin.Google.AI.Edge.LiteRT" Version="2.1.0.1" />
+    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.18-beta1" />
   </ItemGroup>
   <Target Name="DownloadFile" BeforeTargets="_ExtractAar">
     <DownloadFile SourceUrl="https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-support-api/0.4.4/tensorflow-lite-support-api-0.4.4.aar" DestinationFolder="Jars" />
