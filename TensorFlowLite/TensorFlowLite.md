@@ -11,7 +11,7 @@ Add the TensorFlow Lite package to your project file:
 
 ```
 <ItemGroup>
-  <PackageReference Include="TensorFlowLite.iOS" Version="2.14.0" />
+  <PackageReference Include="TensorFlowLite.iOS" Version="2.17.1" />
 </ItemGroup>
 ```
 

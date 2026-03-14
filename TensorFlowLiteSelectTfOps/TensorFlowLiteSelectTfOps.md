@@ -6,8 +6,8 @@ the `TensorFlowLiteSelectTfOps` package to your project file, in addition to the
 
 ```
 <ItemGroup>
-  <PackageReference Include="TensorFlowLite.iOS" Version="2.14.0" />
-  <PackageReference Include="TensorFlowLiteSelectTfOps.iOS" Version="2.14.0" />
+  <PackageReference Include="TensorFlowLite.iOS" Version="2.17.1" />
+  <PackageReference Include="TensorFlowLiteSelectTfOps.iOS" Version="2.17.1" />
 </ItemGroup>
 ```
 

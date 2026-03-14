@@ -21,8 +21,8 @@
     <NoWarn>BG8403</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.AI.Edge.LiteRT" Version="2.1.0.1" />
-    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.18-beta1" />
+    <PackageReference Include="Xamarin.Google.AI.Edge.LiteRT" Version="1.4.0.1" />
+    <PackageReference Include="Xamarin.Google.Android.ODML.Image" Version="1.0.0.19-beta1" />
   </ItemGroup>
   <Target Name="DownloadFile" BeforeTargets="_ExtractAar">
     <DownloadFile SourceUrl="https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-support-api/0.4.4/tensorflow-lite-support-api-0.4.4.aar" DestinationFolder="Jars" />
